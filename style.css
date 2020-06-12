@@ -1,0 +1,254 @@
+:root {
+    font-size: 10px;
+    --primary-color: #5B7553;
+    --secondary-color: #e9e8e8;
+    --accent-color: #70AE6E;
+    --option: #544E61;
+    --divbg: #FFFBFC;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    background-color: var(--secondary-color);
+    height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--option)
+}
+
+main {
+    padding: 0.5rem;
+    margin: 5rem;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+}
+
+nav {
+    top: 0;
+    left: 0;
+    height: 5rem;
+    width: 100%;
+    position: fixed;
+    background-color: var(--primary-color);
+    font-family: 'Play', sans-serif;
+}
+
+nav h1 {
+    width: 50px;
+    margin: 0px;
+    margin-left: 25px;
+    font-size: 45px;
+    font-weight: 100;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: 1s;
+}
+
+a:hover {
+    color: black
+}
+
+label {
+    font-size: 13px;
+}
+
+.font {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.box {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--divbg);
+    box-shadow: var(--option);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.primary {
+    width: 40%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.secondary {
+    display: grid;
+    grid-template-rows: 5% 72% 23%;
+    margin-left: 1rem;
+    width: 60%;
+    height: 100%;
+    background-color: var(--divbg);
+    border-radius: 10px;
+}
+
+.entry {
+    width: 25rem;
+    box-sizing: border-box;
+    box-shadow: 12px rgba(0, 0, 0);
+}
+
+.table {
+    border: 1px solid rgba(0, 0, 0, 0.226);
+    border-top-style: none;
+    border-right-style: soid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+}
+
+.thead {
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 15px;
+}
+
+.tbody {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.tbody::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+.tbody::-webkit-scrollbar-thumb {
+    background-color: var(--option)
+}
+
+.tdata {
+    padding: 0.5rem;
+    font-size: 15px;
+    margin: 1rem 0;
+}
+
+.border {
+    border: 1px solid rgba(0, 0, 0, 0.226);
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-left-style: none;
+}
+
+.calc {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 5fr 1fr 2fr 2fr 2fr;
+}
+
+.col {
+    padding: 5px 9px;
+    box-sizing: border-box;
+}
+
+.col2 {
+    width: 15rem;
+    padding: 5px 9px;
+    box-sizing: border-box;
+}
+
+.company {
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    margin: 0;
+}
+
+input {
+    width: 19rem;
+    padding: 10px;
+    border: 1px solid rgb(200, 197, 197);
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-style: italic;
+    outline: 0;
+    text-transform: capitalize;
+}
+
+input:hover,
+input:focus,
+input:active {
+    box-shadow: 0 0 8px rgb(211, 211, 211);
+}
+
+#tname {
+    padding: 10px 0;
+    width: 48rem;
+    margin: 0;
+    border: 0;
+    font-size: 15px;
+    font-style: normal;
+}
+
+#tdate {
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+#discount {
+    width: 55px;
+    height: 20px;
+    padding: 0;
+    border-radius: 0;
+    margin: 0
+}
+
+#vat {
+    width: 15px;
+    padding: 0;
+    margin: 0
+}
+
+button {
+    width: 90px;
+    padding: 8px 0px;
+    border-radius: 10px;
+    border: 0;
+    background-color: var(--primary-color);
+    color: white;
+    transition: 0.5s;
+    outline: none;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+    cursor: pointer;
+}
+
+#edit,
+#del {
+    padding: 0;
+    margin: 0;
+    width: 3rem;
+    background-color: var(--divbg);
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoicer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&family=Ubuntu:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">
+            <h1>Invoicer</h1>
+        </a>
+    </nav>
+    <main>
+        <div class="primary column font">
+            <div class="form box entry">
+                <h1>Data Entry:</h1>
+                <form id="form" onsubmit="event.preventDefault();inputData()" autocomplete="off">
+                    <div>
+                        <label>Item: </label>
+                    </div>
+                    <div>
+                        <input type="text" id="name" required />
+                    </div>
+                    <div>
+                        <label>Quantity: </label>
+                    </div>
+                    <div>
+                        <input type="number" id="qty" required />
+                    </div>
+                    <div>
+                        <label>Rate: </label>
+                    </div>
+                    <div>
+                        <input type="number" id="amt" required />
+                    </div>
+                    <div>
+                        <center><button>Add</button></center>
+                    </div>
+                </form>
+            </div>
+            <div id="editField"></div>
+        </div>
+        <div class="secondary font">
+            <div class="company">
+                <div><input type="text" id="tname" placeholder="Company name here:"></div>
+                <div id="tdate"></div>
+            </div>
+            <div class="table column">
+                <div class="thead grid">
+                    <div>Item</div>
+                    <div>Qty</div>
+                    <div>Rate</div>
+                    <div>Amount</div>
+                    <div>Edit</div>
+                </div>
+                <div class="tbody column" id="tbody">
+                </div>
+            </div>
+            <div class="calc">
+                <div>
+                    <div class="col">Total: </div>
+                    <div class="col">Discount: </div>
+                    <div class="col">13% V.A.T</div>
+                    <div class="col">Grand Total: </div>
+                </div>
+                <div>
+                    <div id="sumTotal" class="col2 ">____________</div>
+                    <div class="col2">
+                        <input type="number" id="discount" onchange="calculation()" />
+                    </div>
+                    <div class="col2">
+                        <input type="checkbox" id="vat" onchange="calculation()" />
+                    </div>
+                    <div id="grandTotal" class="col2">____________</div>
+                    <button onclick="display()">Print</button>
+                </div>
+            </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
